@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Icon="/WPF;component/cute.ico">
     <Grid>
         <Label	Content="Hello World!"
 				HorizontalAlignment="Center" VerticalAlignment="Top" 
