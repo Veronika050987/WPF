@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid_properties", "Grid_pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuBar", "MenuBar\MenuBar.csproj", "{95D97D2D-83B2-4053-BECA-63FC4865A654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTextBoxControl", "CustomTextBoxControl\CustomTextBoxControl.csproj", "{1BD6F340-50E1-4D10-A278-40188C7E1D08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{95D97D2D-83B2-4053-BECA-63FC4865A654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D97D2D-83B2-4053-BECA-63FC4865A654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D97D2D-83B2-4053-BECA-63FC4865A654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD6F340-50E1-4D10-A278-40188C7E1D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD6F340-50E1-4D10-A278-40188C7E1D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD6F340-50E1-4D10-A278-40188C7E1D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD6F340-50E1-4D10-A278-40188C7E1D08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
