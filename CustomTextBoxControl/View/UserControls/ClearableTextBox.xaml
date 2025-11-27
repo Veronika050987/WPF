@@ -15,8 +15,10 @@
                  Margin="5,0,35,0"
                  TextChanged="txtInput_TextChanged"                 
                  KeyDown="txtInput_KeyDown"
+                 GotFocus="txtInput_GotFocus"
+                 Panel.ZIndex="1"
                  />
-        <TextBlock Name="tbPlaceholder" Text="Placeholder"
+        <TextBlock Name="tbPlaceholder" Text="{Binding Placeholder, RelativeSource={RelativeSource AncestorType={x:Type local:ClearableTextBox}}}"
                    FontWeight="Light" Foreground="DarkGray" 
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    Margin="7,0,0,0"

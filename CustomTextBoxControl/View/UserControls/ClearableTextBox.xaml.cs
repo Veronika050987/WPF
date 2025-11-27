@@ -87,5 +87,9 @@ namespace CustomTextBoxControl.View.UserControls
 				}
 			}
 		}
+		private void tbPlaceholder_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+		     txtInput.Focus();
+		}
 	}
 }
