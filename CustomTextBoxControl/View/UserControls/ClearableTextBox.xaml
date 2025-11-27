@@ -6,20 +6,27 @@
              xmlns:local="clr-namespace:CustomTextBoxControl.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250"
-             FontSize="22">
+             FontSize="22"
+             Focusable="True"
+             Background="Transparent">
     <Grid Background="LightGreen">
-        <TextBox Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
-                 TextChanged="txtInput_TextChanged"      
+        <TextBox Name="txtInput" VerticalContentAlignment="Center" 
+                 Background="Transparent" BorderThickness="0"
+                 Margin="5,0,35,0"
+                 TextChanged="txtInput_TextChanged"                 
                  KeyDown="txtInput_KeyDown"
-                 />     
+                 />
         <TextBlock Name="tbPlaceholder" Text="Placeholder"
                    FontWeight="Light" Foreground="DarkGray" 
                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Margin="7,0,0,0"
+                   IsHitTestVisible="False"
                    Panel.ZIndex="-1"/>
         <Button Name="btnClear" Width="30" HorizontalAlignment="Right" Content="x" 
                 Background="Transparent" Foreground="LightGray"
                 BorderThickness="0"
-                Click="btnClear_Click" 
-                />
+                Click="btnClear_Click"
+                Visibility="Collapsed"
+                Panel.ZIndex="2"/>
     </Grid>
 </UserControl>

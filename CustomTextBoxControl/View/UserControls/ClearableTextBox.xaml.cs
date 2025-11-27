@@ -20,36 +20,71 @@ namespace CustomTextBoxControl.View.UserControls
 	/// </summary>
 	public partial class ClearableTextBox : UserControl
 	{
-		private string placeholder;
+		public static readonly DependencyProperty PlaceholderProperty =
+			DependencyProperty.Register("Placeholder", typeof(string), typeof(ClearableTextBox), 
+				new PropertyMetadata(""));
 
 		public string Placeholder
 		{
-			get { return placeholder; }
-			set { placeholder = tbPlaceholder.Text= value; }
+			get { return (string)GetValue(PlaceholderProperty); }
+			set { SetValue(PlaceholderProperty, value); }
+		}
+
+		public static readonly DependencyProperty ShowClearButtonProperty =
+			DependencyProperty.Register("ShowClearButton", typeof(bool), typeof(ClearableTextBox), 
+				new PropertyMetadata(true));
+
+		public bool ShowClearButton
+		{
+			get { return (bool)GetValue(ShowClearButtonProperty); }
+			set { SetValue(ShowClearButtonProperty, value); }
 		}
 
 		public ClearableTextBox()
 		{
 			InitializeComponent();
+
+			this.DataContext = this;
 		}
 
 		private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			tbPlaceholder.Visibility = txtInput.Text == "" ? Visibility.Visible : Visibility.Hidden;
-			//if (txtInput.Text.Length > 16)Window.GetWindow(this).Focus();
-			//if (txtInput.Text.Length > 16) txtInput.Text = txtInput.Text.Substring(0, 16);
-        }
+			btnClear.Visibility = (string.IsNullOrEmpty(txtInput.Text) || !ShowClearButton) ? 
+				Visibility.Collapsed : Visibility.Visible;
+		}
+
+		private void txtInput_GotFocus(object sender, RoutedEventArgs e)
+		{
+			// При получении фокуса, Placeholder должен стать невидимым,
+			// а кнопка очистки - видимой (если ShowClearButton = true)
+			tbPlaceholder.Visibility = string.IsNullOrEmpty(txtInput.Text) ? Visibility.Visible : 
+				Visibility.Hidden;
+			btnClear.Visibility = (string.IsNullOrEmpty(txtInput.Text) || !ShowClearButton) ? 
+				Visibility.Collapsed : Visibility.Visible;
+		}
 
 		private void btnClear_Click(object sender, RoutedEventArgs e)
 		{
 			txtInput.Text = "";
+			
+			txtInput.Focus();
 		}
 
 		private void txtInput_KeyDown(object sender, KeyEventArgs e)
 		{
-			if(e.Key==Key.Enter)
+			if (e.Key == Key.Enter)
 			{
-				Window window = Window.GetWindow(this);
+				e.Handled = true;
+
+				// Получаем UIElement, который сейчас сфокусирован
+				UIElement currentFocusedElement = FocusManager.GetFocusedElement(this) as UIElement;
+
+				if (currentFocusedElement != null)
+				{
+					DependencyObject nextElement = null;
+					FocusNavigationDirection direction = FocusNavigationDirection.Next;
+				}
 			}
 		}
 	}
