@@ -10,6 +10,7 @@
     <Grid Background="LightGreen">
         <TextBox Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
                  TextChanged="txtInput_TextChanged"      
+                 KeyDown="txtInput_KeyDown"
                  />     
         <TextBlock Name="tbPlaceholder" Text="Placeholder"
                    FontWeight="Light" Foreground="DarkGray" 

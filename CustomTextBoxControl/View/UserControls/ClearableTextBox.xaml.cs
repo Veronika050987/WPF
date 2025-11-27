@@ -44,5 +44,13 @@ namespace CustomTextBoxControl.View.UserControls
 		{
 			txtInput.Text = "";
 		}
+
+		private void txtInput_KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.Key==Key.Enter)
+			{
+				Window window = Window.GetWindow(this);
+			}
+		}
 	}
 }
