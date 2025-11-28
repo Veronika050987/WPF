@@ -49,7 +49,8 @@ namespace CustomTextBoxControl.View.UserControls
 		{
 			if(e.Key==Key.Enter)
 			{
-				Window window = Window.GetWindow(this);
+				TraversalRequest tr = new TraversalRequest(FocusNavigationDirection.Down);
+				(sender as Control).MoveFocus(tr);
 			}
 		}
 	}
