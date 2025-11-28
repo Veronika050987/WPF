@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialogs", "Dialogs\Dialogs.csproj", "{AD5777FF-ED3D-4AD4-8312-F37246D0C4F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPaddress", "IPaddress\IPaddress.csproj", "{45EDEB47-E61A-4D88-82FF-1FC01BF17481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBox", "ListBox\ListBox.csproj", "{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{AD5777FF-ED3D-4AD4-8312-F37246D0C4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD5777FF-ED3D-4AD4-8312-F37246D0C4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD5777FF-ED3D-4AD4-8312-F37246D0C4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EDEB47-E61A-4D88-82FF-1FC01BF17481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EDEB47-E61A-4D88-82FF-1FC01BF17481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EDEB47-E61A-4D88-82FF-1FC01BF17481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EDEB47-E61A-4D88-82FF-1FC01BF17481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
