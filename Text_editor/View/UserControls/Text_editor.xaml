@@ -5,30 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Text_editor.View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="800">
+             d:DesignHeight="700" d:DesignWidth="800">
     <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
+        <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Menu FontSize="18">
-                <MenuItem Header="File">
-                    <MenuItem Header="New"/>
-                    <MenuItem Header="Open"/>
-                    <Separator/>
-                    <MenuItem Header="Save"/>
-                    <MenuItem Header="Save as..."/>
-                    <Separator/>
-                    <MenuItem Header="Quit" Click="MenuItem_Click"/>
-                </MenuItem>
-                <MenuItem Header="Edit">
-                    <MenuItem Header="Find"/>
-                        <MenuItem Header="Replace"/>
-                        <MenuItem Header="Undo"/>
-                    <MenuItem Header="Redo"/>
-                </MenuItem>
-            </Menu>
-        </Grid>   
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#F0F0F0" Margin="5">
+            <Button Content = "New" Width="60" Margin="0,0,5,0" Click="NewButton_Click"/>
+            <Button Content = "Open" Width="60" Margin="0,0,5,0" Click="OpenButton_Click"/>
+            <Button Content = "Save" Width="60" Margin="0,0,5,0" Click="SaveButton_Click"/>
+            <Separator Width = "1" Background="Gray" Margin="0,0,10,0"/>
+            <Button Content = "Undo" Width="60" Margin="0,0,5,0" Click="UndoButton_Click"/>
+            <Button Content = "Redo" Width="60" Margin="0,0,5,0" Click="RedoButton_Click"/>
+        </StackPanel>
+        <TextBox Grid.Row="1"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 FontSize="14"
+                 Padding="5"
+                 Name="MainTextBox"
+                 />
     </Grid>
 </UserControl>
