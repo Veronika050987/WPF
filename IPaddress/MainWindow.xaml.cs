@@ -20,9 +20,16 @@ namespace IPaddress
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		//public string MyIpAddress { get; set; } = "192.168.1.1"; // Example initial value
+		public string MyIpAddress { get; set; } // Example initial value
 		public MainWindow()
 		{
 			InitializeComponent();
+			DataContext = this; // Or your ViewModel instance
+		}
+		private void Button_Click(object sender, RoutedEventArgs e) 
+		{ 
+			MessageBox.Show($"Current IP: {MyIpAddress}"); 
 		}
 	}
 }
