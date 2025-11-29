@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPaddress", "IPaddress\IPad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBox", "ListBox\ListBox.csproj", "{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text_editor", "Text_editor\Text_editor.csproj", "{F9EF138D-B6BC-4DCE-A7D2-D1C39DC165BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F508C4F6-E9ED-47CC-9BB1-6B7FD1813D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9EF138D-B6BC-4DCE-A7D2-D1C39DC165BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9EF138D-B6BC-4DCE-A7D2-D1C39DC165BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9EF138D-B6BC-4DCE-A7D2-D1C39DC165BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9EF138D-B6BC-4DCE-A7D2-D1C39DC165BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
