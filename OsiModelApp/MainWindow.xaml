@@ -1,0 +1,23 @@
+﻿<Window x:Class="OsiModelApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OsiModelApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="OsiDataGrid"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  SelectionChanged="OsiDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Уровень (Layer)" Binding="{Binding Layer}" Width="150"/>
+                <DataGridTextColumn Header="Название (Name)" Binding="{Binding Name}" Width="200"/>
+                <DataGridTextColumn Header="Пример протокола" Binding="{Binding ProtocolExample}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
